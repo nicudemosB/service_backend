@@ -21,7 +21,7 @@ db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
-mongoose.connect('mongodb://127.0.0.1:27017/dealer')
+mongoose.connect('mongodb://127.0.0.1:27017/service')
 mongoose.connection.once('open', () => {
     console.log('connected to mongod...');
 })
