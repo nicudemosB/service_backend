@@ -1,4 +1,6 @@
 const MONGODB_URI  = process.env.MONGODB_URI 
+const mongoose = require('mongoose')
+const cors = require('cors')
 
 // Connect to Mongo
 mongoose.connect(MONGODB_URI, () => {
