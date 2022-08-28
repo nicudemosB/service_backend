@@ -12,7 +12,7 @@ app.use(cors())
 
 
 // Connect to Mongo
-mongoose.connect(MONGODB_URI, () => {
+mongoose.connect(MONGODB_URI, () => {a;
     console.log('whatever')
 })
 
