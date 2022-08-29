@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Service = require('./models/service');
+const cors = require('cors')
 const app = express();
 const db = mongoose.connection;
 require('dotenv').config();
@@ -16,8 +17,7 @@ db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: false }))
+app.use(cors())
 app.use(express.json())
 // app.get('/', (req, res) => {
 //     res.send("hello world");
