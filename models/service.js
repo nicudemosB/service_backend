@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const serviceSchema = mongoose.Schema ({
     make: String,
     model: String,
-    Year: Number,
+    year: Number,
     needService: {type: Boolean, default: true}
 },{timestamps: true}
 
