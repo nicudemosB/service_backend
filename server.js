@@ -19,10 +19,6 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 app.use(cors())
 app.use(express.json())
-// app.get('/', (req, res) => {
-//     res.send("hello world");
-// });
-
 
 app.post('/service', (req, res) => {
     Service.create(req.body, (err, createdService) => {
