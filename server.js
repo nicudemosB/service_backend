@@ -6,7 +6,6 @@ const app = express();
 const db = mongoose.connection;
 require('dotenv').config();
 
-
 // Connect to Mongo
 const PORT = process.env.PORT
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -45,4 +44,5 @@ app.put('/service/:id', (req, res) => {
             res.json(updatedService)
         })
 })
+
 app.listen(PORT, () => console.log('Listening on port:', PORT));
